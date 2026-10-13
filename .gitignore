@@ -1,9 +1,8 @@
 # Epic workflow artifacts — never commit
 .epic/
 
-# Agent tooling — machine-local state
-.claude/agent-memory/
-.claude/settings.local.json
+# Agent tooling — the whole .claude/ directory is machine-local (settings, agent memory, skills)
+.claude/
 
 # Go
 /bin/
