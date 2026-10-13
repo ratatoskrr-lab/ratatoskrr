@@ -7,5 +7,5 @@ Open-source HTTP API and dashboard for WhatsApp accounts, built on
 
 > Unofficial client: WhatsApp may restrict or ban numbers that look automated.
 
-- Website: https://ratatoskrr.dev
+- Website: ratatoskrr.dev (coming soon)
 - License: Apache-2.0 — see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE)

@@ -1,6 +1,13 @@
 Ratatoskrr
 Copyright 2026 lucascouts
 
-This product is licensed under the Apache License, Version 2.0 (see LICENSE).
-It depends on third-party modules under their own licenses, notably
-go.mau.fi/whatsmeow (MPL-2.0); see each module for its terms.
+The source code of this product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It depends on third-party modules under their own licenses, notably:
+- go.mau.fi/whatsmeow (MPL-2.0)
+- go.mau.fi/libsignal (GPL-3.0), a dependency of whatsmeow
+
+Because go.mau.fi/libsignal is linked into the compiled program, binaries and container images
+built from this source are combined works distributed under the terms of the GNU General Public
+License, version 3. See THIRD_PARTY_NOTICES in each release for the full list and the location of
+the Corresponding Source.

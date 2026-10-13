@@ -1,0 +1,80 @@
+# Epic workflow artifacts — never commit
+.epic/
+
+# Agent tooling — machine-local state
+.claude/agent-memory/
+.claude/settings.local.json
+
+# Go
+/bin/
+/tmp/
+*.test
+*.out
+coverage.*
+# Profiles from load tests (pprof) — can be large and carry runtime memory
+*.pprof
+/profiles/
+
+# Release output (goreleaser)
+/dist/
+
+# Node — dashboard (web/), docs site, n8n node, TypeScript SDK
+node_modules/
+.pnpm-store/
+*.tsbuildinfo
+/web/dist/
+/docs-site/.next/
+/docs-site/out/
+/integrations/n8n/dist/
+/sdks/typescript/dist/
+
+# Python SDK
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+/sdks/python/dist/
+/sdks/python/build/
+
+# PHP SDK
+/sdks/php/vendor/
+
+# Helm
+/deploy/helm/**/charts/*.tgz
+
+# Playwright run artefacts — traces can carry request headers and cookies
+/test-results/
+/playwright-report/
+/blob-report/
+/.playwright/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+/deploy/.env
+# Private material by extension, repo-wide: the next key will be written
+# somewhere no directory rule anticipated.
+*.key
+*.pem
+*.p12
+*.pfx
+*_rsa
+# Local master keys (KEK) for envelope encryption — ADR-0012
+/deploy/keys/
+
+# Local runtime data — Postgres, Garage, telemetry volumes; may hold WhatsApp
+# session keys and received media (personal data)
+/deploy/data/
+*.db
+*.sqlite
+
+# Real-number e2e configuration — phone numbers and group ids of test accounts
+/e2e/.env
+/e2e/captures/raw/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
